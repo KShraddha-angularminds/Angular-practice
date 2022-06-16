@@ -1,0 +1,44 @@
+h1 {
+  color: green;
+  text-align: center;
+}
+input {
+  height: 40px;
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+.add-btn {
+  height: 40px;
+  width: 300px;
+  display: block;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  background-color: green;
+  border: none;
+}
+.to-do {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  margin: 0 200px;
+}
+.todo-item {
+  padding: 70px;
+  //   margin-top: 20px;
+  margin: 50px 8px 8px 8px;
+}
+.card {
+  box-shadow: 0 4px 6px 0 rgba(32, 59, 43, 0.2);
+  transition: 0.3s;
+  // border: 2px solid red;
+}
+.delete-btn {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(35, 116, 236);
+  border: none;
+  height: 30px;
+  width: 80px;
+}

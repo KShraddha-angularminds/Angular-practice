@@ -1,0 +1,22 @@
+<h1>TO-DO List App</h1>
+<form
+  #myForm="ngForm"
+  [formGroup]="todoList"
+  (ngSubmit)="onSubmit(); myForm.resetForm()"
+>
+  <input type="text" formControlName="todo" #name /><br />
+  <!-- <p *ngIf="!name.value">This is Error mf</p> -->
+  <input type="date" formControlName="date" /><br />
+  <button type="submit" class="add-btn">Add</button>
+</form>
+<div *ngIf="todoArr">
+  <div class="to-do">
+    <div *ngFor="let obj of todoArr; let i = index" class="todo-item card">
+      <p>{{ obj.todo }}</p>
+      <p>{{ obj.date }}</p>
+      <button class="delete-btn" (click)="deleteToDo(i)">Delete</button>
+    </div>
+  </div>
+</div>
+
+<a [routerLink]="['/showTodo', 5]">anything</a>
