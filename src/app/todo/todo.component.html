@@ -5,6 +5,7 @@
   (ngSubmit)="onSubmit(); myForm.resetForm()"
 >
   <input type="text" formControlName="todo" #name /><br />
+
   <!-- <p *ngIf="!name.value">This is Error mf</p> -->
   <input type="date" formControlName="date" /><br />
   <button type="submit" class="add-btn">Add</button>
@@ -20,3 +21,6 @@
 </div>
 
 <a [routerLink]="['/showTodo', 5]">anything</a>
+<!-- <input #InputVar type="text" />
+<button (click)="getVal(InputVar.value)">click</button>
+{{ InputVar.value }} -->
