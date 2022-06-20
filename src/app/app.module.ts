@@ -8,9 +8,15 @@ import { TodoComponent } from './todo/todo.component';
 import { ShowTodoComponent } from './show-todo/show-todo.component';
 import { TodoService } from './todo.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
-  declarations: [AppComponent, TodoComponent, ShowTodoComponent],
+  declarations: [
+    AppComponent,
+    TodoComponent,
+    ShowTodoComponent,
+    ReactiveFormsComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -18,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot([
       { path: '', component: TodoComponent },
       { path: 'showTodo/:todoId', component: ShowTodoComponent },
+      { path: 'reactive-forms', component: ReactiveFormsComponent },
     ]),
   ],
   providers: [TodoService],
